@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    padding-bottom:20px;
+    background-color: beige;
+}
+header{
+    width: 100%;
+    background-color: #fdf9ba;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+.container-logo{
+    align-items: left;
+    display: table;
+}
+.logo-texto{
+    margin-left: 20px;
+    color: black;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+}
+.logo-imagem{
+    width: 1px;
+    border-radius: 25px;
+    text-align: left;
+    display: table-cell;
+    padding-right: 10px;
+}
+.menu li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.menu li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    
+}
+.slogan{
+    text-align: center;
+    background-color: black;
+    padding: 10px 10px;
+    color: orange;
+    font-size: 20px;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+}
+.imagemE-slogan{
+    display: table-cell;
+    margin-left: 50%;
+}
+.texto-slogan{
+    display: table-cell;
+    font-style: italic;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.imagemD-slogan{
+    display: table-cell;
+    margin-right: 50%;
+}
+.servicos{
+    text-align: center;
+    font-size: 30px;
+}
+.servicos-ofertados{
+    display: inline-table;
+    width: 50%;
+    margin-inline-start: 25%;
+    text-align: center;
+}
+.primeira-linha{
+    display: table-row;
+}
+.assistencia{
+    display: table-cell;
+    padding: 100px 100px;
+    background-color: black;
+    color: orange;
+    opacity: 0.75;
+    font-size: large;
+}
+.consoles{
+    display: table-cell;
+    padding: 100px 100px;
+    background-color: black;
+    color: orange;
+    opacity: 0.85;
+    font-size: large;
+}
+.segunda-linha{
+    display: table-row;
+}
+.jogos-novos{
+    display: table-cell;
+    padding: 100px 100px;
+    background-color: black;
+    color: orange;
+    opacity: 0.75;
+    font-size: large;
+}
+.jogos-usados{
+    display: table-cell;
+    padding: 100px 100px;
+    background-color: black;
+    color: orange;
+    opacity: 0.85;
+    font-size: large;
+}
+footer{
+    padding: 20px;
+    background-color: #fdf9ba;
+    color: black;
+    margin-top: 20px;
+    display: table;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+footer dl{
+    display: table-cell;
+}
+footer dt{
+    font-weight: bold;
+}
+footer dd{
+    margin-left: 0px;
+}
+.redes-sociais{
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+.funcionarios{
+    text-align: center;
+}
+.lista-funcionarios{
+   display: inline-block;
+}
+.add-produto{
+    text-align: center; 
+}
+.controle-estoque{
+    text-align: center;
+    align-items: center;
+}
