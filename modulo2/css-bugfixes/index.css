@@ -105,6 +105,8 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td button {
@@ -122,8 +124,6 @@ td button {
     margin-top: 20px;
     height: 100px;
 }
-
-
 
 .container-do-search img{
     width: 25px;
@@ -145,6 +145,8 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    margin-top: 100px;
+    margin-left: 50%;
 }
 
 #back-button:hover {
