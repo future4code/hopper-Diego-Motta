@@ -134,6 +134,12 @@ td button {
     height: 25px;
 
 }
+.container-do-search img:hover{
+    opacity: 50%;
+}
+.container-do-search img:active{
+    opacity: 100%;
+}
 
 .container-da-tabela img{
     width: 40px;
