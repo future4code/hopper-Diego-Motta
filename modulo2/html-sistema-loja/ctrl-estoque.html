@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4964/4964814.png" type="image/x-icon">
-</head>
-<body>
-    <div>
-        <h1><em><font color="orange">Doge Games</font></em></h1>
-    </div>
-    
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Doge Games</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4964/4964814.png" type="image/x-icon">
+    </head>
+    <body class="fundo">
+        <header>
+            <div class="container-logo">
+                <div class="logo-imagem"><img src="/img/doge.jpg" width="100"></div>
+                <div class="logo-texto">
+                    <h1>Doge Games</h1>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ctrl-estoque.html">Controle de Estoque</a></li>
+                    <li><a href="add-produto.html">Adicionar Produto</a></li>
+                    <li><a href="funcionarios.html">Funcionários</a></li>
+                </ul>
+            </div>
+        </header>
+    <div class="controle-estoque">
+        <h2>Controle de Estoque</h2>
 
-    <h2>Controle de Estoque</h2>
+        <table>
+            <tr>
+                <th>Foto</th>
+                <th>Descrição</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade disponível</th>
+            </tr>
 
-    <table>
-        <tr>
-            <th>Foto</th>
-            <th>Descrição</th>
-            <th>Preço (R$)</th>
-            <th>Quantidade disponível</th>
-        </tr>
+            <tr>
+                <td><img src="img/Nintendo Switch.jpg" width="150" alt="Foto do console nintendo switch e dois controles, console preto, controles nas cores azul e vermelho cada um"/></td>
+                <td> Nintendo Switch </td>
+                <td> 2200,00 </td>
+                <td> 09 </td>
+            </tr>
 
-        <tr>
-            <td><img src="img/Nintendo Switch.jpg" width="150" alt="Foto do console nintendo switch e dois controles, console preto, controles nas cores azul e vermelho cada um"/></td>
-            <td> Nintendo Switch </td>
-            <td> 2200,00 </td>
-            <td> 09 </td>
-        </tr>
+            <tr>
+                <td><img src="img/Xbox Series S.webp" width="150" alt="Foto do console xbox series s com um controle, ambos em branco"/></td>
+                <td> Xbox Series S </td>
+                <td> 2300,00 </td>
+                <td> 05 </td>
+            </tr>
 
-        <tr>
-            <td><img src="img/Xbox Series S.webp" width="150" alt="Foto do console xbox series s com um controle, ambos em branco"/></td>
-            <td> Xbox Series S </td>
-            <td> 2300,00 </td>
-            <td> 05 </td>
-        </tr>
+            <tr>
+                <td><img src="img/Playstation 5.jpg" width="150" alt="Foto do console playstation 5 e um controles, ambos em branco com um detalhe preto"/></td>
+                <td> PlayStation 5 </td>
+                <td> 2999,00 </td>
+                <td> 03 </td>
+            </tr>
 
-        <tr>
-            <td><img src="img/Playstation 5.jpg" width="150" alt="Foto do console playstation 5 e um controles, ambos em branco com um detalhe preto"/></td>
-            <td> PlayStation 5 </td>
-            <td> 2999,00 </td>
-            <td> 03 </td>
-        </tr>
+            <tr>
+                <td><img src="img/Nintendo GameCube.jpg" width="150" alt="Foto do console nintendo gamecube e um controle, ambos na cor roxa"/></td>
+                <td> Nintendo GameCube </td>
+                <td> 700,00 </td>
+                <td> 02 </td>
+            </tr>
+            
+            <tr>
+                <td><img src="img/PS Vita Slim.jpg" width="150" alt="Foto do console portátil ps vita slim na cor preta"/></td>
+                <td> PS Vita Slim </td>
+                <td> 1740,00 </td>
+                <td> 01 </td>
+            </tr>
+        </div>    
 
-        <tr>
-            <td><img src="img/Nintendo GameCube.jpg" width="150" alt="Foto do console nintendo gamecube e um controle, ambos na cor roxa"/></td>
-            <td> Nintendo GameCube </td>
-            <td> 700,00 </td>
-            <td> 02 </td>
-        </tr>
-        
-        <tr>
-            <td><img src="img/PS Vita Slim.jpg" width="150" alt="Foto do console portátil ps vita slim na cor preta"/></td>
-            <td> PS Vita Slim </td>
-            <td> 1740,00 </td>
-            <td> 01 </td>
-        </tr>
-       
-
-    </table>
-
+        </table>
+    <footer>
+        <dl>
+            <dt>E-mail:</dt>
+            <dd>contato@dogegames.com</dd>
+        </br>
+            <dt>Telefone:</dt>
+            <dd>(61) 9 9121-1212</dd>
+        </dl>
+        <div class="redes-sociais">
+            <div>
+                <a href="https:www.instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" width="50"/></a>
+                <a href="https:www.discord.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968898.png" width="50"/></a>
+                <a href="https:www.reddit.com"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384019.png" width="50"/></a>
+            </div>
+        </div>
+    </footer>  
 </body>
 </html>
