@@ -79,6 +79,10 @@ div>p:first-child {
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
+li{
+    display: list-item;
+    list-style-position: inside;
+}
 
 #container-para-comprar {
     background-color: #e7eb90;
