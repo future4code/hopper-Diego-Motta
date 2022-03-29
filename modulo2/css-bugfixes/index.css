@@ -111,6 +111,9 @@ td button {
     border-radius: 5px;
     color: black;
 }
+.botao-compra:hover{
+    background-color: #e0c23b;
+}
 
 .container-do-search {
     margin-top: 20px;
