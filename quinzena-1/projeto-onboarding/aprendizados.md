@@ -1,3 +1,0 @@
-# Aprendizados da semana
-Nessa semana de aulda da **LaBenu** eu aprendi o básico sobre **terminal**, algo que nunca mexi a fundo além de um comando ou outro no **windows**. Não tive grandes dificuldades e memorizei bem os comandos apresentados.
-Também conheci o **git**, o professor explicou perfeitamente e consegui assimilar os conhecimentos facilmente. Fiz o exercício com tranquilidade e enviei sem problemas e a minha **pull request** foi aprovada.
