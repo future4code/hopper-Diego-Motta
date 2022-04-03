@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Diego Motta</title>
 </head>
-<body class="container">
+<body>
 
     <header>
         <div class="cabecalho">
             <p>logo</p>
             <div class="menu">
                 <p><a href="#sobre">sobre</a></p>
-                <p><a href="#portfolio">portfolio</a></p>
-                <p><a href="#curriculo">curriculo</a></p>
+                <p><a href="/portfolio.html">portfolio</a></p>
+                <p><a href="/curriculo.html">curriculo</a></p>
                 <p class="botao-contato"><a href="#contato">contato</a></p>
             </div>
         </div>
@@ -24,84 +24,45 @@
     <section class="a">
         <div id="sobre">
             <div class="introducao">
-                <h2>Contador & Desenvolvedor</h2>
-                <p>apresentacao</p>
-                <p>apresentacao</p>
+                <h2>Oi, eu sou o </h2> 
+                <h2>Diego</h2>
+                <p>Sou formado em contabilidade, com especialização em finanças. Estou em processo de transição de carreira para a área de tecnologia.</p>
+                <p>Após estudar um tempo sozinho decidi iniciar o curso de Web Full Stack na LaBenu. O curso abrange tanto o desenvolvimento Backend quanto Frontend, além de Soft Skills.</p>
             </div>
             <div class="skills">
-                <p>skill 1</p>
-                <p>skill 2</p>
-                <p>skill 3</p>
-                <p>skill 4</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="b">
-        <div id="portfolio">
-            <h2 class="titulo-portfolio">Portfolio</h2>
-            <div class="trabalhos">
-                <div class="integre">
-                    <img src="img/projetos-integre.png" alt="">
-                    <h3>Integre Nutrição</h3>
-                    <p>Desenvolvimento completo do site de <br> 
-                        uma clínica de nutrição</p>
-                    <p class="tools">WordPress | SEO | Hosting</p>
-                    <button>Veja</button>
-                </div>
-                <div class="blackjack">
-                    <img src="img/projetos-blackjack.png" alt="">
-                    <h3>Projeto blackjack</h3>
-                    <p>Desenvolvimento de uma aplicação que simula <br> 
-                        um jogo de Blackjack contra o computador</p>
-                    <p class="tools">JavaScript | HTML | Git</p>
-                    <button>Veja</button>
-                </div>
-                <div class="festival">
-                    <img src="img/projetos-blackjack.png" alt="">
-                    <h3>Festival de Cinema Online</h3>
-                    <p>Edição do vídeo de apresentação com todos <br> 
-                        os curtas vencedores do festival</p>
-                    <p class="tools">Premiere | After Effects | Photoshop</p>
-                    <button>Veja</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="b">
-        <div id="curriculo">
-            <div class="educacao">
-                <h3>Educação</h3>
-                <div class="estudos">
-                    <div class="tempo">
-                        <p>Tempo</p>
-                        <p>Tempo</p>
-                        <p>Tempo</p>
-                        <p>Tempo</p>
-                    </div>
-                    <div class="curso">
-                        <p>Labenu</p>
-                        <p>UniCeub</p>
-                        <p>Curso EM Vídeo</p>
-                        <p>UnB</p>
-                    </div>
-                </div>
-            </div>
-            <div class="experiencia">
-                <h3>Experiência</h3>
-                <div class="trabalho">
-                    <div class="tempo">
-                        <p>Tempo</p>
-                        <p>Tempo</p>
-                        <p>Tempo</p>
-                    </div>
-                    <div class="atividades">
-                        <p>atividades</p>
-                        <p>atividades</p>
-                        <p>atividades</p>
-                    </div>
-                </div>
+                
+                <ul aria-label="Hard Skills">
+                    <li>JavaScript <br>
+                        <div class="barras"><span class="progresso-js"></span></div></li>
+                    <li>Python <br>
+                        <div class="barras"><span class="progresso-py"></span></div></li>
+                    <li>WordPress<br>
+                        <div class="barras"><span class="progresso-wp"></span></div></li>
+                    <li>HTML<br>
+                        <div class="barras"><span class="progresso-html"></span></div></li>
+                    <li>CSS<br>
+                        <div class="barras"><span class="progresso-css"></span></div></li>
+                    <li>Photoshop<br>
+                        <div class="barras"><span class="progresso-ps"></span></div></li>
+                    <li>Inglês<br>
+                        <div class="barras"><span class="progresso-en"></span></div></li>
+                </ul>
+                <ul aria-label="Soft Skills">
+                    <li>Liderança<br>
+                        <div class="barras"><span class="progresso-ld"></span></div></li>
+                    <li>Trabalho em Equipe<br>
+                        <div class="barras"><span class="progresso-eq"></span></div></li>
+                    <li>Resolução de Problemas<br>
+                        <div class="barras"><span class="progresso-rp"></span></div></li>
+                    <li>Comunicação<br>
+                        <div class="barras"><span class="progresso-com"></span></div></li>
+                    <li>Gestão de Tempo<br>
+                        <div class="barras"><span class="progresso-gt"></span></div></li>
+                    <li>Foco<br>
+                        <div class="barras"><span class="progresso-foco"></span></div></li>
+                    <li>Resiliência<br>
+                        <div class="barras"><span class="progresso-res"></span></div></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -110,14 +71,20 @@
         <div id="contato">
             <h2>Contato</h2>
             <div class="entre-em-contato">
-                <div class="formulario">
-                    <form action="">formulario</form>
-                </div>
+                <form class="formulario">
+                    <label for="inputNome">Nome:</label>
+                    <input type="text" id="inputNome">
+                    <label for="inputEmail">Endereço de Email:</label>
+                    <input type="email" id="inputEmail">
+                    <label for="textAreaMensagem">Mensagem:</label>
+                    <textarea name="textAreaMensagem" id="textAreaMensagem"></textarea>
+                    <button class="botao-formulario">Enviar Mensagem</button>
+                </form>
                 <div class="redes-sociais">
-                    <img src="/img/linkedin.png" alt="">
-                    <img src="/img/github.png" alt="">
-                    <img src="/img/discordia.png" alt="">
-                    <img src="/img/instagram.png" alt="">
+                    <a href="mailto:mottadiego93@gmail.com"><img src="/img/email.png" alt="email-icon"></a>
+                    <a href="https://www.linkedin.com/in/diego-smotta/"><img src="/img/linkedin.png" alt="linkedin-link"></a>
+                    <a href="https://github.com/mDiego93"><img src="/img/github.png" alt="github-link"></a>
+                    <a href="https://discordapp.com/users/420720840313667614/"><img src="/img/discordia.png" alt="discord-link"></a>
                 </div>
             </div>
         </div>
