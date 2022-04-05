@@ -1,0 +1,392 @@
+html, body {
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #EEEDED;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; 
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+/* Menu de todas as páginas */
+header{
+    background-color: #DD9866;
+    min-height: 50px;
+
+}
+.cabecalho{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    text-align: center;
+    column-gap: 30%;
+    margin: 20px;
+    height: 20%;
+}
+.menu{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.menu a{
+    border-radius: 30%;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+}
+.menu a:hover{
+    border-radius: 5%;
+    background-color: #f8f1ec;
+}
+
+
+/* Página sobre */
+.a{
+    height: auto;
+}
+#sobre{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+.introducao{
+    text-align: left;
+    border-right: 1px solid #0E7C7B;
+    height: auto;
+    text-align: left;
+    padding: 50px;
+}
+.introducao h2{
+    font-size:150px;
+    padding: 5px;
+    display:inline;
+    font-weight: lighter;
+}
+.introducao p{
+    font-size:50px;
+    padding: 5px;
+    max-width: 80%;
+    font-weight: lighter;
+}
+
+
+.skills{
+    display: inline-grid;
+    border-left: 0;
+    flex-direction: column;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    padding: 20px;
+}
+ul:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight: normal;
+
+}
+ul{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    list-style-type: none;
+    font-weight: lighter;
+    
+}
+.barras{
+	border-radius: 60px;
+    overflow: hidden;
+    width: 50%;
+    height: 5px;
+    text-align: left;
+    background: rgba(0,0,0,0.075);
+}
+#span{
+    display: block;
+}
+.progresso-js{
+    background: green;
+    padding: 17px;
+    width: 10px;
+}
+.progresso-py{
+    background: green;
+    padding: 5px;
+    width: 10px;
+}
+.progresso-wp{
+    background: green;
+    padding: 40px;
+    width: 10px;
+}
+.progresso-html{
+    background: green;
+    padding: 15px;
+    width: 10px;
+}
+.progresso-css{
+    background: green;
+    padding: 10px;
+    width: 10px;
+}
+.progresso-ps{
+    background: green;
+    padding: 40px;
+    width: 10px;
+}
+.progresso-en{
+    background: green;
+    padding: 80px;
+    width: 10px;
+}
+.progresso-ld{
+    background: green;
+    padding: 35px;
+    width: 10px;
+}
+.progresso-eq{
+    background: green;
+    padding: 50px;
+    width: 10px;
+}
+.progresso-rp{
+    background: green;
+    padding: 65px;
+    width: 10px;
+}
+.progresso-com{
+    background: green;
+    padding: 30px;
+    width: 10px;
+}
+.progresso-gt{
+    background: green;
+    padding: 50px;
+    width: 10px;
+}
+.progresso-foco{
+    background: green;
+    padding: 40px;
+    width: 10px;
+}
+.progresso-res{
+    background: green;
+    padding: 51px;
+    width: 10px;
+}
+
+/* Página portfolio */
+.b{
+    height: auto;
+}
+#portfolio{
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: auto 2fr;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+    margin-bottom: 200px;
+}
+#portfolio h2{
+    font-size:100px;
+    padding: 20px;
+    display:inline;
+    font-weight: lighter;
+    margin: 50px;
+}
+#portfolio img{
+    max-width: 80vh;
+}
+
+.trabalhos{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.trabalhos h3{
+    font-size:80px;
+    padding: 20px;
+    display:inline;
+    font-weight: lighter;
+    margin: 20px;
+}
+.trabalhos p{
+    font-size:40px;
+    padding: 5px;
+    font-weight: lighter;
+    max-width: fit-content;
+    margin: 20px;
+}
+.botao-potfolio{
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #0E7C7B;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 3px;
+    width: 200px;
+}
+.botao-potfolio:hover{
+    border-radius: 5%;
+    background-color: #ddd5d0;
+}
+.integre{
+
+    border-right: 1px solid #0E7C7B;
+}
+
+/* Página curriculo */
+.c{
+    height: auto;
+}
+#curriculo{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+#curriculo h3{
+    font-size:75px;
+    padding: 20px;
+    display:inline;
+    font-weight: lighter;
+    margin: 50px;
+}
+#curriculo p{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.educacao{
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: 1fr 3fr;
+    border-right: 1px solid #0E7C7B;
+}
+.estudos{
+    padding: 10px;
+}
+.estudos .linhas{
+    display: flex;
+    align-items: center;
+    border: 1px groove #EEEDED;
+    border-left: 0;
+    border-right: 0;
+}
+.estudos .colunas{
+    flex: 50%;
+}
+.experiencia{
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: 1fr 3fr; 
+
+}
+.trabalho{
+    padding: 10px;
+}
+.trabalho .linhas{
+    display: flex;
+    align-items: center;
+    border: 1px groove #EEEDED;
+    border-left: 0;
+    border-right: 0;
+}
+.trabalho .colunas{
+    flex: 50%;
+}
+
+
+
+/* Footer de todas as páginas */
+footer{
+    background-color: #5C6E91;
+    min-height: 50px;
+}
+#contato{
+    display: grid;
+    flex-direction: column;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+#contato h2{
+    font-size:50px;
+    padding: 5px;
+    font-weight: lighter;
+}
+.entre-em-contato{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+form{
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px #999;
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+}
+.formulario input, textarea{
+    width: 1000px;
+    padding: 10px;
+    margin-bottom: 1em;
+    font: 1em;
+    border: 1px solid #0E7C7B;
+}
+.formulario label{
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.botao-formulario{
+    background-color: white;
+    border: 1px solid #0E7C7B;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 3px;
+}
+.botao-formulario:hover{
+    border-radius: 5%;
+    background-color: #ddd5d0;
+}
+
+.redes-sociais{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.redes-sociais img{
+    max-width: 30%;
+
+}
