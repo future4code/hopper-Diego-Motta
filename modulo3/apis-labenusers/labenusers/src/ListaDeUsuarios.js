@@ -9,15 +9,19 @@ class Lista extends React.Component {
 
   pegarUsuarios = () => {
 
-    axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', {
+    axios
+    .get(
+      'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users',
+      {
         headers: {
            Authorization: "diego-motta-hopper"
         }
+      }
+    )
+    .then(response => { 
+        this.setState({usuarios: response.data}) 
     })
-    .then((response)=>{ 
-        this.setState({usuarios: response.data.result.list}) 
-    })
-    .catch((error)=>{
+    .catch(error=>{
         console.log('Erro', error.response.data)
     })
   }
@@ -27,15 +31,19 @@ class Lista extends React.Component {
   }
   
   render(){
-
-    const listaUsuarios = this.state.usuarios.map((pessoas) =>{
-      return <h3>{pessoas.name}</h3>
-    })
-    
-    return(
-      <div></div>
+    return (
+      <div>
+        <ul>
+          {this.state.usuarios.map((nomes, index) => {
+            return (
+              <li key={index}>
+                {nomes.name}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     )
-  
   }
 
 
