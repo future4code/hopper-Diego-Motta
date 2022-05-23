@@ -29,6 +29,26 @@ class Lista extends React.Component {
   componentDidMount(){
     this.pegarUsuarios()
   }
+
+  apagarUsuarios = id => {
+    
+    axios
+    .delete(
+      `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, 
+      {
+        headers: {
+          Authorization: "diego-motta-hopper"
+       }
+      }
+    )
+    .then(() => {
+      alert('Usuário apagado com sucesso!')
+    })
+    .catch(error => {
+      alert('Não foi possível apagar esse usuário!')
+    })
+
+  }
   
   render(){
     return (
@@ -38,6 +58,7 @@ class Lista extends React.Component {
             return (
               <li key={index}>
                 {nomes.name}
+                <button onClick={() => this.apagarUsuarios(nomes.id)}>Deletar</button>
               </li>
             )
           })}

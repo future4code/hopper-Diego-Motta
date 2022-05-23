@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Cadastro from './CadastroDeUsuarios';
-import Lista from './ListaDeUsuarios';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Cadastro />
-    <Lista />
+    <App />
   </React.StrictMode>
 );
 
