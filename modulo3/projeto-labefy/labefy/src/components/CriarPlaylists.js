@@ -9,7 +9,11 @@ class CriarPlaylists extends React.Component{
     }
     
     onChangeName = (event) => {
-        this.setState({inputName: event.target.value})
+        {event.target.value.toLowerCase().includes('funk') ?
+            alert("Não é possível criar playlists de funk :)")
+            :
+            this.setState({inputName: event.target.value})
+        }
     }
     
     novaPlaylist = () => {

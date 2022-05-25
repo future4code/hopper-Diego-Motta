@@ -1,12 +1,14 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
+import AdicionarMusica from "./AdicionarMusica";
 
 class ListaPlaylists extends React.Component{
 
     state = {
         playlists: [],
-        resultado: []
+        resultado: [],
+        playlistExibida: []
     }
 
     refresh = () => {
@@ -23,8 +25,36 @@ class ListaPlaylists extends React.Component{
             console.log(error.response.data)
         })
         console.log(this.state.playlists)
-        console.log(this.state.resultado)
+        console.log(this.state.resultado);
     };
+
+    apagarLista = id => {
+        axios.delete(
+            `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`,
+            {headers: {Authorization: "diego-motta-hopper"}}
+        )
+        .then(() => {
+            alert('Playlist apagada!')
+        })
+        .catch(error => {
+            alert('Não foi possível apagar essa playlist!')
+        })
+    }
+
+    exibirLista = id => {
+        axios.get(
+            `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}/tracks`,
+            {headers: {Authorization: "diego-motta-hopper"}}
+        )
+        .then(response => {
+            this.setState({playlistExibida: response.data.result.tracks})
+        })
+        .catch(error => {
+            console.log(error.responde.data)
+        })
+        console.log(this.exibirLista)
+        console.log(id)
+    }
 
 
 
@@ -39,11 +69,27 @@ class ListaPlaylists extends React.Component{
                     {this.state.playlists.map((nomes, index) => {
                         return (
                             <li key={index}>
-                                {nomes.name}
+                                <a onClick={() => this.exibirLista(nomes.id)}>{nomes.name}</a>
+                                <button onClick={() => this.apagarLista(nomes.id)}>Apagar</button>
                             </li>
                         )
                     })}
                 </ul>
+                <div>
+                    <AdicionarMusica/>    
+                    <div>
+                        {this.state.playlistExibida.map((nomes, index) => {
+                            return (
+                            <p>Teste</p>,
+                            <ul aria-label="Teste">
+                                <li key={index}>
+                                    {nomes.name}
+                                </li>
+                            </ul>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
         )
     }
