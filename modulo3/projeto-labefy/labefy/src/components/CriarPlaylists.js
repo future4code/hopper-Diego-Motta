@@ -42,7 +42,7 @@ class CriarPlaylists extends React.Component{
     render(){
         return(
         <div>
-            <h1>Nova Playlist</h1>
+            <h2>Nova Playlist</h2>
             <input placeholder="Nome da Playlist"
                 type="text"
                 value={this.state.inputName}

@@ -1,33 +1,16 @@
-import axios from "axios";
 import React from "react";
 import styledComponents from "styled-components";
 import CriarPlaylists from "./components/CriarPlaylists";
-import ListaPlaylists from "./components/ListaPlaylists";
+import Playlists from "./components/Playlists";
 
 class App extends React.Component{
   
-  state = {
-    playlists: false,
-  }
-
-  exibirPlaylists = () => {
-    this.setState({playlists: !this.state.playlists})
-  }
-
   render(){
     return(
       <div>
+        <h1>Labify</h1>
         <CriarPlaylists/>
-        
-        <button onClick={this.exibirPlaylists}>Playlists</button>
-        
-        {this.state.playlists === true ?
-          <ListaPlaylists />
-          :
-          <div/>
-        }
-        
-      
+        <Playlists />
       </div>
     )
   }

@@ -41,13 +41,14 @@ class AdicionarMusica extends React.Component{
         this.setState({inputArtista: event.target.value})
     }
     onChangeLink = (event) => {
-        this.setState({inputLink: `http://spoti4.future4.com.br/${event.target.value}.mp3`})
+        this.setState({inputLink: event.target.value})
     }
 
 
     render(){
         return(
             <div>
+                <h3>{this.props.nome}</h3>
                 <input placeholder="Nome" 
                         type="text"
                         value={this.state.inputNome}
@@ -56,11 +57,11 @@ class AdicionarMusica extends React.Component{
                         type="text"
                         value={this.state.inputArtista}
                         onChange={this.onChangeArtista}/>
-                <input placeholder="Entre 1 e 100 escolha o numero da sua música."                         
-                        type="number"
+                <input placeholder="URL da Música"                         
+                        type="url"
                         value={this.state.inputLink}
                         onChange={this.onChangeLink}/>
-                <button onClick={this.adicionar}>Adicionar</button>
+                <button onClick={this.adicionar}>Adicionar Música</button>
             </div>
         )
     }
