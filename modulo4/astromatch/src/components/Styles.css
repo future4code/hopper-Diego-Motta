@@ -2,25 +2,54 @@ html, body {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
-    background-color: #f6ebf9;
+    background-color: #f4f4f4;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0; 
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
 }
-
 .App{
     display: grid;
-    grid-template-rows:  1fr 0.5fr 5fr;
-    align-items: center;
+    justify-content: center;
+}
+
+.Astromatch{
+    display: grid;
+    grid-template-rows:  0.5fr 0.5fr 5fr;
+    align-items: top;
     justify-content: center;
     justify-items: center;
+    border: 0.5px solid black;
+    border-radius: 5%;
+    background-color: #3f0d0c;
+    min-width: 350px;
+    max-width: 450px;
+    height: 667px;
+}
+.Titulo{
+    color: #d8d0c5;
 }
 
 .Botoes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    align-items:  center;
+    justify-items: center;
+    
+}
+.Botoes img {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #d8d0c5;
+    border-radius: 20%;
+    background-color: #d8d0c5;
+}
+.Botoes img:hover{
+    cursor: pointer;
 }
 
 
@@ -34,23 +63,30 @@ html, body {
 
 .Card{
     display: grid;
-    grid-template-rows: 3fr 0.5fr;
-    border: 2px solid red;
+    grid-template-rows: 1fr 0.5fr;
+    
     height: 500px;
+    gap: 10px;
 }
 
 .Perfil{
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
     max-width: 450px;
-    gap: 10px;
+    align-items: center;
+    height: 400px;
+    background-color: #d8d0c5;
+    border: 0.5px solid #d8d0c5;
+    border-radius: 2%;
+    border: 1px solid black;
 }
 
 .Perfil img{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     justify-self: center;
-    border-radius: 20px;
+    border-radius: 50px;
+    
 }
 
 .dados{
@@ -61,13 +97,10 @@ html, body {
     text-align: center;
     gap: 10px;
     max-width: 300px;
-    padding-bottom: 20px;
+    height: 100px;
 }
 
-.idade{
-    border: 2px solid black;
-    border-radius: 20px;
-}
+
 
 .info{
     display: grid;
@@ -75,19 +108,76 @@ html, body {
     width: 300px;
 }
 
+.info-age{
+    border: 0.5px solid black;
+    border-radius: 20px;
+    width: 50px;
+    justify-self: center;
+    background-color: #d9b061;
+    font-weight: bold;
+}
 .info-name{
     font-weight: bold;
     align-self: center;
 }
 
 .info-bio{
-    height: 40px;
+    height: 60px;
+    
+    border-radius: 15%;
 }
 
 .Like-dislike{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 50%;
-    justify-self: center;
+    width: 100%;
+    
+    justify-items: center;
+    
 }
+.Like-dislike img{
+    width: 45px;
+    height: 45px;
+    border-radius: 20%;
+    background-color: #d8d0c5;
+    padding: 10px;
+    border: 1px solid black;
+}
+.Like-dislike img:hover{
+    cursor: pointer;
+}
+
+
+
+
+.Lista-matchs{
+    display: grid;
+    width: 300px;
+    background-color: #d8d0c5;
+    border: 0.5px solid #d8d0c5;
+    border-radius: 2%;
+    border: 1px solid black;
+    height: 500px;
+    
+}
+
+.Matchs{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10%;
+    background-color: #d9b061;
+    height: 60px;
+    font-weight: bold;
+}
+.Matchs:hover{
+    cursor: pointer;
+}
+
+.Matchs img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+

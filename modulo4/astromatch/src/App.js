@@ -5,6 +5,10 @@ import Card from "./components/Card"
 import MeusMatches from "./components/MeusMatches";
 import "./components/Styles.css"
 
+import imgLimparMatchs from "./components/img/refresh.png"
+import imgMatchs from "./components/img/user.png"
+import imgVoltar from "./components/img/repeat.png"
+
 const App = () =>{
 
   const [paginaInicial, setPaginaInicial] = useState(true);
@@ -22,18 +26,40 @@ const App = () =>{
       .catch(error => {
         console.log(error.response.data)
     });
+    alert("Matchs zerados")
   }
+
+  const [iconeExibido, setIconeExibido] = useState(imgMatchs);
+  
+  const exibirIcone = () => {
+    if(iconeExibido == (imgMatchs)){
+      setIconeExibido(imgVoltar);
+    }else{
+      setIconeExibido(imgMatchs)
+    }
+    
+
+  };
+  
+
+  
+  
+
 
   return (
     <div className="App">
+      <div className="Astromatch">
         <header className="Titulo">
           <h1>astroMatch</h1>
         </header>
         
         <section className="Botoes">
-          <button onClick={() => limparMatchs()}>Limpar Matchs</button>
+          
+          <img src={imgLimparMatchs} onClick={() => limparMatchs()}/>
           <div/>
-          <button onClick={() => exibirMatchs()}>{paginaInicial === true ? 'Matchs' : 'Voltar'}</button>
+
+          <img src={iconeExibido} onClick={() => {exibirMatchs(); exibirIcone();}} />
+          
         </section>
         
         <main className="Pagina-exibida">
@@ -49,7 +75,7 @@ const App = () =>{
           </div>
           
         </main>
-    
+      </div>
     </div>
   );
 }

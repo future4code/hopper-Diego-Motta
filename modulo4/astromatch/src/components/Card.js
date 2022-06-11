@@ -3,6 +3,9 @@ import axios from "axios";
 
 import "./Styles.css"
 
+import imgLike from "./img/heart.png"
+import imgDislike from "./img/multiply.png"
+
 const Card = () =>{
 
     const [pessoa, setPessoa] =useState({});
@@ -36,13 +39,14 @@ const Card = () =>{
             'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/diego/choose-person', dados,
         )
         .then(response => {
-            console.log(response.data)
+            console.log(response.data);
+            {response.data.isMatch === true ? alert("Match") : alert("Não foi match")} 
         })
         .catch(error => {
             alert('Erro :(')
             console.log(error.response.data)
         });
-        receberPessoa()
+        receberPessoa();
     };
 
     useEffect(() => {
@@ -69,8 +73,8 @@ const Card = () =>{
         </container>
         
         <container className="Like-dislike">
-            <button onClick={() => testeMatch(false)}>X</button>
-            <button onClick={() => testeMatch(true)}>♥</button>
+            <img src={imgDislike} onClick={() => testeMatch(false)}/>
+            <img src={imgLike} onClick={() => testeMatch(true)}/>
         </container>
     
     </div>
