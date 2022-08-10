@@ -1,0 +1,1 @@
+console.log("Exercicios de 1 a 5 feitos, desafio 6 também. Depois vou finalizar os outros desafios.")
