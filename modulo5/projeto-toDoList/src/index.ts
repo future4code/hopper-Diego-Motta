@@ -2,7 +2,7 @@ import express, {Express, Request, Response} from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net";
 import connection from './database/connection';
-import { Usuario } from './types';
+import { Task, Usuario } from './types';
 
 const app: Express = express();
 
@@ -68,6 +68,92 @@ app.get("/user/:id", async (req: Request, res: Response) => {
     `)
 
     res.status(200).send(resultado[0])
+   } catch (error) {
+      res.status(errorCode).send(error.message)
+   }
+})
+
+app.put("/user/edit/:id",async (req: Request, res: Response) => {
+   let errorCode = 400
+
+   try {
+      const id = Number(req.params.id)
+      const name = req.body.name
+      const nickname = req.body.nickname
+      
+      if(!name){
+         throw new Error("Preencha o nome do usuário");
+      }
+      if(!nickname){
+         throw new Error("Preencha o apelido");
+      }
+
+      await connection.raw(`
+         UPDATE TodoListUser
+         SET name = "${name}", nickname = "${nickname}"
+         WHERE id = ${id}
+      `)
+
+      res.status(200).send("Dados Alterados")
+   } catch (error) {
+      res.status(errorCode).send(error.message)
+   }
+})
+
+app.post("/task",async (req: Request, res: Response) => {
+   let errorCode = 400
+   try {
+      const {title, description, limitDate, creatorUserId} = req.body
+
+      if(!title){throw new Error("Insira o título");}
+      if(!description){throw new Error("Insira a descrição");}
+      if(!limitDate){throw new Error("Insira a data limite");}
+      if(!creatorUserId){throw new Error("Insira o ID do usuário");}
+
+      const novaTarefa: Task = {
+         id: Number(String((Date.now())*1.5).slice(-3)),
+         title,
+         description,
+         status: "to_do",
+         limitDate: limitDate.split("/").reverse().join("/"), 
+         creatorUserId
+      }
+
+      await connection.raw(`
+         INSERT INTO TodoListTask(id, title, description, status, limit_date, creator_user_id)
+         VALUES(${novaTarefa.id}, "${novaTarefa.title}", "${novaTarefa.description}", "${novaTarefa.status}", ${novaTarefa.limitDate}, "${novaTarefa.creatorUserId}");
+      `)
+
+      res.status(200).send("Tarefa criada")
+   } catch (error) {
+      res.status(errorCode).send(error.message)
+   }
+})
+
+app.get("/task/:id",async (req: Request, res: Response) => {
+   let errorCode = 400
+   
+   try {
+      const idTarefa = req.params.id;
+      
+      const tarefa = await connection.raw(`
+      SELECT * FROM TodoListUser WHERE id = "${idTarefa}"`)
+      
+      if (!tarefa) {throw new Error("Tarefa não encontrada");}
+
+      const resultado = await connection.raw(`
+      SELECT
+      t.id,
+      t.title,
+      t.description,
+      t.status,
+      t.limit_date,
+      t.creator_user_id,
+      u.nickname
+      FROM TodoListTask as t
+      JOIN TodoListUser as u ON t.creator_user_id = u.id`);
+
+      res.status(200).send(resultado[0])
    } catch (error) {
       res.status(errorCode).send(error.message)
    }
