@@ -1,3 +1,4 @@
+
 import { Request, Response } from "express"
 import connection from "../database/connection"
 import { TABLE_USERS } from "../database/tableNames"
@@ -24,7 +25,7 @@ export const createUser = async (req: Request, res: Response) => {
             email: newUser.email,
             password: newUser.password
         })
-        
+
         res.status(201).send({ message: "Usuário criado", user: newUser })
     } catch (error) {
         res.status(errorCode).send({ message: error.message })
