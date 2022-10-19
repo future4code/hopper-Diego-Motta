@@ -1,10 +1,12 @@
 import { app } from "./app"
-import { createUser } from './endpoints/createUser'
-import { createTask } from './endpoints/createTask'
+import { UserController } from "./controller/UserController"
 
 
-app.post('/user', createUser)
 
-app.post('/task', createTask)
+const userController = new UserController()
 
+app.post('/user', userController.createUser)
 
+app.get('/all', userController.getUsers)
+
+app.delete('/:id', userController.deleteUser)
