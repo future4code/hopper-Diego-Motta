@@ -18,4 +18,8 @@ export class UserBusiness {
     })
   }
 
+  async select(){
+    return await new UserDatabase().select();
+  }
+
 }

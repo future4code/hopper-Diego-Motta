@@ -14,4 +14,13 @@ export class UserController {
       res.status(400).send(error.message);
     }
   }
+
+  async select(req: Request, res: Response){
+    try {
+      const users = await new UserBusiness().select();
+      res.send(users).status(200);
+    } catch (error: any) {
+      res.status(400).send(error.message);
+    }
+  }
 }
