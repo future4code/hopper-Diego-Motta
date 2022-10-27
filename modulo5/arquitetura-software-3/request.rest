@@ -1,0 +1,31 @@
+POST
+Create User
+http://localhost:3003/user/create
+Bodyraw (json)
+json
+{
+  "name": "string",
+  "email": "string",
+  "password": "string"
+}
+###
+POST
+Create Movie
+http://localhost:3003/movie/create
+Bodyraw (json)
+json
+{
+    "title": "string",
+    "description": "string",
+    "duration_in_minutes": "number",
+    "year_of_release": "number"
+
+}
+###
+GET
+Get Users
+http://localhost:3003/user/select
+###
+GET
+Get Movies
+http://localhost:3003/movie/select
