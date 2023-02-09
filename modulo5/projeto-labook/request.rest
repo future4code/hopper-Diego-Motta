@@ -1,0 +1,37 @@
+Labook
+###
+POST
+Create User
+http://localhost:3003/users/
+
+Bodyraw (json)
+json
+{
+  "name": "Lucca Lucceta",
+  "email": "lucca@email.com",
+  "password": "123456"
+}
+
+###
+POST
+Create Post
+http://localhost:3003/post/
+
+Bodyraw (json)
+json
+{
+  "photo": "Pet Sematary",
+  "description": "After tragedy strikes, a grieving father discovers an ancient burial ground behind his home with the power to raise the dead.",
+  "type": "103",
+  "authorId": "1989"
+}
+
+###
+GET
+Get Users
+http://localhost:3003/users/
+
+###
+GET
+Get Post
+http://localhost:3003/post/
