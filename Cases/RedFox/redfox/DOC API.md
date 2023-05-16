@@ -1,5 +1,3 @@
-Aqui está um exemplo de documentação para a API fornecida:
-
 # Documentação da API
 
 Esta documentação descreve os endpoints disponíveis na API para gerenciar informações sobre Pokémon.
